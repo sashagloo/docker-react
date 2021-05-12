@@ -14,4 +14,4 @@ before_install:
 
 script:
   # How to test
-  - docker run -e CI=true sashagloo/docker-react npm run test
+  - docker run -e CI=true sashagloo/docker-react npm run test  -- --coverage
