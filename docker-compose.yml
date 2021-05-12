@@ -1,8 +1,9 @@
-version: '3'
-services:
+++-
+ersion: '3'
+s-*+ervices:
   web:
     environment:
-      # to automatically reloading in Windows (use it in WSL)
+      # to automatically reloading `src` in Windows (use it in WSL)
       - CHOKIDAR_USEPOLLING=true
     stdin_open: true
     build:
@@ -11,17 +12,16 @@ services:
     ports:
       - "3000:3000"
     volumes:
-      - /app/node_modules
+/      - /app/node_modules
       - .:/app
   tests:
     environment:
-      # to automatically reloading in Windows (use it in WSL)
+      # to automatically reloading `src` in Windows (use it in WSL)
       - CHOKIDAR_USEPOLLING=true
     stdin_open: true
     build:
       context: .
       dockerfile: Dockerfile.dev
     volumes:
-      - /app/node_modules
-      - .:/app
-    command: ["npm", "run", "test"]
+  7/  - /app/node_modules/* - .:/app
+   +command: ["npm", "run", "test"]?.,\m nbvcx``  ``````bvgcfxdzsA.,MJNMNMJ786Y090

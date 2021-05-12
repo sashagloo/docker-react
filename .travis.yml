@@ -1,0 +1,17 @@
+language: generic
+
+# super user permissions in order execute this build
+sudo: required
+
+# Tell Travis what we want to do with our code --------------------------------------------
+services:
+  # need `docker-cli` preinstalled: automatically install copy of docker into running container
+  - docker
+
+before_install:
+  # Build image using Dockerfile.dev
+  - docker build -t sashagloo/docker-react -f Dockerfile.dev .
+
+script:
+  # How to test
+  - docker run -e CI=true sashagloo/docker-react npm run test
